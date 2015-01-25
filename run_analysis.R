@@ -34,7 +34,7 @@ m_std_idx <- grep("-std\\(\\)|-mean\\(\\)", names(X))
 X <- X[,m_std_idx]
 
 clean_har_data <- cbind(S, Y, X)
-write.table(clean_har_data, "clean_har_data.txt")
+write.table(clean_har_data, "clean_har_data.txt", row.names=FALSE)
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set 
 ## with the average of each variable for each activity and each subject.
@@ -61,4 +61,4 @@ for (i in 1:subject_id_count)
   }  
 }
 
-write.table(result, "summarized_mean_result.txt")
+write.table(result, "summarized_mean_result.txt", row.names = FALSE)
