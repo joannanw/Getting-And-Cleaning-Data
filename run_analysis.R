@@ -61,3 +61,4 @@ for (i in 1:subject_id_count)
   }  
 }
 
+write.table(result, "summarized_mean_result.txt")
