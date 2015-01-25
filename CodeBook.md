@@ -11,7 +11,7 @@ The R script included in this repo (run_analysis.R) cleans up the data and manip
 **Y = 10299x1
 **S = 10299x1
 
-* Extracts only the measurements on the mean and standard deviation for each measurement. This is done later on in the script by extracting columns from X that have the words '-std()' or '-mean()'. There are 66 variables that meet this criteria, resulting in a 10299x68 data table dimention.
+* Extracts only the measurements on the mean and standard deviation for each measurement. This is done later on in the script by extracting columns from X that have the words '-std()' or '-mean()'. There are 66 variables that meet this criteria.
 
 * Uses descriptive activity names to name the activities in the data set. The activity names from activity_label.txt replace the numeric number from Y. The description are standardized to lower case with a spacing between words. Eg:
 ** 1 is replaced with "walking
@@ -22,5 +22,7 @@ The R script included in this repo (run_analysis.R) cleans up the data and manip
 **tbodyacc-std()-y
 **tgravityacc-mean()-y
 
-* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. This is done by creating a new empty matrix that filling in the subject_id, activity, and mean of each of the column according to the subject and activity. The resulting data dimension is 180x68.
+* The tidy data set clean_har_data.txt is created that stores the output of the first 4 steps. This data set dimension is 10299x68, and has updated activity names, as well as appropriate column labels.
+
+* From the data set above, creates a second, independent tidy data set with the average of each variable for each activity and each subject. This is done by creating a new empty matrix that filling in the subject_id, activity, and mean of each of the column according to the subject and activity. The resulting data dimension is 180x68, stored in summarized_mean_result.txt.
 
